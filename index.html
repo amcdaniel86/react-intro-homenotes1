@@ -28,5 +28,65 @@
     <!-- 3. JSX - use HTML quoting, and HTML tags to render subcomponents.  -->
 
     <!-- single way data flow: properties flow down, actions flow up. -->
+
+<!-- TRaversy below -->
+
+<!-- primarily focused on user interfaces. no assumptions about rest of app, like db's/models. strictly for UI. Model View Controller, react is the view of MVC. react can be used on client or server.  -->
+
+
+<!-- React has a virtual DOM, a slimmer version of the DOM in the browser. only updates the parts  that need to be re rendered. It's faster -->
+
+<!-- React is simple, handles all UI updates for you, refreshes only updated parts of the app. everything a component, easier to read, and re-use code.  -->
+
+<!-- uses JSX: JS syntax extension, HTML inside react components. not required, but highly recommended, makes things easier. -->
+
+<!-- Babel JS compiler: to use JSX, tools needed to transform it into javascript. Babel JS compiler, and webpack.  -->
+<!-- add <script type="text/babel" to script tags or it won't work. -->
+
+  <!-- React component example - 
+  var HelloMessage = React.createClass({
+    render:function() {
+      return <div>Hello{this.props.name}</div>;
+    }
+  });
+    ReactDOM.render(
+      <HelloMessage name="John" />,
+      Document.getElementById('app'));
+    )
+-->
+<!-- component called HelloMessage setting equal to React.createClass.
+lifecycle functions - render is one.
+it'll return the component markup which is <div> Hello{this.props.name}, 
+  bottom is where component is rendered.
+name property is accessed above in the component.
+2nd paramter is at bottom - Document.getElementById('app') is id of the element where we want to insert the Hello component. -->
+
+<!-- States and Props
+
+components can 
+
+- hold properties (props) that can be passed in as attributes.
+- maintain internal "state" data. 
+: for objects, strings, numbers etc.
+- when state changed, component is re-rendered and markup is updated. Making React very dynamic.
+this.set.state
+-->
+
+<!-- Lifecycle methods
+
+fired off when component is rendered or updated.
+common ones:
+
+render- only one required, renders the application.
+
+getInitialState - default values for states.
+getDefaultProps
+componentWillMount
+componentDidMount-->
+
+<!-- React addons
+
+animation addons
+2 way data binding, react link. -->
   </body>
 </html>
